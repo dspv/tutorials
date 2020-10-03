@@ -1,0 +1,25 @@
+# ReplicaSet
+apiVersion: apps/v1
+kind: ReplicaSet
+
+metadata:
+  name: my2app-replicaset
+  labels:
+    name: myapp
+    type: front-end
+
+spec:
+  template:
+    metadata:
+      name: myapp-pod
+      labels:
+        app: myapp
+        type: front-end
+    spec:
+      containers:
+        - name: redis-container
+          image: redis
+  replicas: 7
+  selector: 
+    matchLabels:
+      type: front-end

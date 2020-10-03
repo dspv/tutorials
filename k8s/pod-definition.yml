@@ -1,0 +1,31 @@
+##############################
+## Basic high-level content ##
+##############################
+# apiVersion: 
+# kind:
+# metadata:
+
+# spec:
+###############################
+#-----------------------------#
+#   Kind        |   Version   #
+#-----------------------------#
+#   Pod         |   v1        #
+#   Service     |   v1        #
+#   ReplicaSet  |   apps/v1   #
+#   Deployment  |   apps/v1   #
+#-----------------------------#
+###############################
+
+kind: Pod
+apiVersion: v1
+metadata:
+  name: myapp-pod
+  labels:
+      app: myapp
+      type: front-end
+
+spec:
+  containers:
+    - name: nginx-container
+      image: nginx

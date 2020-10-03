@@ -1,0 +1,14 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: myapp-pod
+  labels:
+      app: myapp
+      type: front-end
+      label: front-jopa
+      tier: front-to-back
+
+spec:
+  containers:
+    - name: redis-container
+      image: redis

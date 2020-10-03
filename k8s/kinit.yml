@@ -1,0 +1,9 @@
+# First yaml file
+apiVersion: apps/v2
+kind: Init #fake thing
+metadata:
+  label: dunno
+spec:
+  containers:
+    - name: dunno-container
+      image: dunno:alpine

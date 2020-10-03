@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: myapp-pod
+  labels:
+    app: myapp
+    type: front-end
+    costcenter: amer
+    location: NA
+    tier: front
+spec:
+  containers:
+    - name: nginx-container
+      image: nginx
+    - name: redis-conrainer
+      image: redis
