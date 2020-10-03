@@ -1,3 +1,6 @@
+### Cheat Sheet ###
+https://training.github.com/downloads/github-git-cheat-sheet/
+
 # init a new repo
 git init
 
@@ -16,8 +19,9 @@ git commit -m "Initial commit" -m "Some description"
 git log
 
 
-
+# ------------------ #
 ### Some SSH Magic ###
+# ------------------ #
 # generate a new SSH key (email to account)
 # then use *.pub file to add a new SSH key to GitHub account
 ssh-keygen -t rsa -b 4096 -C "dmitriy@solodukha.com"
@@ -38,8 +42,9 @@ git remote -v
 https://training.github.com/downloads/github-git-cheat-sheet/
 
 
-
+# ------------ #
 ### Branches ###
+# ------------ #
 # check all the branches
 git branch
 
@@ -58,7 +63,9 @@ git commit -m "comment" -m 'description'
 git diff [branch name]
 git diff feature-readme-001
 
-# merge
+# --------- #
+### Merge ###
+# --------- #
 git merge feature-readme-001
 
 # But #
@@ -74,7 +81,9 @@ git branch -d feature-readme-001
 # and check the branchs
 git branch
 
-### And one again
+# ------------------ #
+### And once again ###
+# ------------------ #
 git status
 git diff
 # (git add .)
@@ -91,3 +100,6 @@ git reset
 git reset HEAD~1
 # get back to a specific point (time machine!)
 git reset [commit hash]
+
+### Chet Sheet ###
+https://training.github.com/downloads/github-git-cheat-sheet/
