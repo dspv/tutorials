@@ -87,4 +87,7 @@ git merge master
 
 # unstage changes
 git reset
-
+# one update back
+git reset HEAD~1
+# get back to a specific point (time machine!)
+git reset [commit hash]
