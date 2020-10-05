@@ -105,3 +105,18 @@ git reset [commit hash]
 https://training.github.com/downloads/github-git-cheat-sheet/
 
 # Test
+
+### And once again
+mkdir myf
+cd myf
+git init
+git status
+git add . # or a filename
+git commit -m "why we do this commit"
+
+# then create a repo on GitHub
+# and connect it to the existing repo locally
+# let's call it 'repo1'
+git remote add origin https://github.com/dspv/repo1.git
+git push -u origin master
+
