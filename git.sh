@@ -189,7 +189,73 @@ git config color.ui
 ### Tags & Releases ###
 #######################
 
+## We use tags to make some release points and be able to roll back
+## let's say we need to change to a master branch
+git checkout master
 
+# create a tag
+git tag [name]
+git tag v1.0
+# check if the tag has been created
+git tag 
+# some annotation
+git tag v1.1 -m "v1.1 release"
+
+## How to display tags?
+git tag
+git show v1.0
+git tag -l 'v1.*'
+
+## But we don't see these newly created tags on GitHub
+## To make it works we need to:
+# push v1.0 tag to the repo
+git push origin v1.0
+
+# push all the tags to the repo
+git push --tags
+
+# delete tags (locally)
+git tag -d v1.0
+git tag --delete v1.0
+
+# delete tags (from remote)
+git push origin -d v1.0
+git push prigin --develte v.1.0
+git push origin :v1.0
+
+## When we create a software we can tag some stable versions with TAGS
+## We cannot checkout tags in Git but
+## We can create a branch from a tag and checkout the branch
+git checkout -v [branch name] [tag name]
+git checkout -v ReleaseVer1 v1.0
+
+## We can create a tag from a past commit
+git tag [tag name] [ref commit]
+git tag v1.2 5fcdb03
+
+
+
+#####################################################################################
+#####################################################################################
+#####################################################################################
+
+
+
+##############################
+### Git Merge & Git Rebase ###
+##############################
+
+## Let's say we created a new repo: REP1
+## We have only 'master' branch
+## Created a file m1.txt on the master branch
+## Created then a new 'feature' branch 
+## Added a file f1.txt to the 'feature' branch
+## Get back to 'mater' branch and made a file m2.txt
+## WHAT TO DO???
+
+## Two ways to integrate changes from one branch to another
+## - Merge
+## - Rebase
 
 
 
