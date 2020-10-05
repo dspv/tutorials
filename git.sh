@@ -19,9 +19,11 @@ git commit -m "Initial commit" -m "Some description"
 git log
 
 
-# ------------------ #
+
+######################
 ### Some SSH Magic ###
-# ------------------ #
+######################
+
 # generate a new SSH key (email to account)
 # then use *.pub file to add a new SSH key to GitHub account
 ssh-keygen -t rsa -b 4096 -C "dmitriy@solodukha.com"
@@ -42,9 +44,10 @@ git remote -v
 https://training.github.com/downloads/github-git-cheat-sheet/
 
 
-# ------------ #
+
+################
 ### Branches ###
-# ------------ #
+################
 # check all the branches
 git branch
 
@@ -63,9 +66,11 @@ git commit -m "comment" -m 'description'
 git diff [branch name]
 git diff feature-readme-001
 
-# --------- #
+
+
+#############
 ### Merge ###
-# --------- #
+#############
 git merge feature-readme-001
 
 # But #
@@ -81,9 +86,36 @@ git branch -d feature-readme-001
 # and check the branchs
 git branch
 
-# ------------------ #
+
+
+###########################
+### Branching & Merging ###
+###########################
+
+# Create a new branch
+git branch [branch name]
+git branch dev
+# switch to a new branch
+git checkout [branch name]
+git checkout dev
+# see the branches
+git branch
+
+# merge the new branch with master branch
+git merge [new branch name]
+git merge
+
+# delete the branch (locally)
+git branch -d [branch name]
+git branch -d dev
+git push origin --delete [branch name]
+git push origin --delete dev
+
+
+
+######################
 ### And once again ###
-# ------------------ #
+######################
 git status
 git diff
 # (git add .)
@@ -104,9 +136,20 @@ git reset [commit hash]
 ### Chet Sheet ###
 https://training.github.com/downloads/github-git-cheat-sheet/
 
-# Test
+
+
+#####################################################################################
+#####################################################################################
+#####################################################################################
+
+
+
+######################################
+### Some practises and repetitions ###
+######################################
 
 ### And once again
+# Let's create a new repo
 mkdir myf
 cd myf
 git init
@@ -119,4 +162,34 @@ git commit -m "why we do this commit"
 # let's call it 'repo1'
 git remote add origin https://github.com/dspv/repo1.git
 git push -u origin master
+
+### Some helpful things
+# autocomplete
+# put git-completion.bash script to the home dir
+curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -o ~/.git-completion.bash
+# add this to .bash-profile
+vi ~/.bash_profile
+
+if [ -f ~/.git-completion.bash ]; then
+  . ~/.git-completion.bash
+fi
+
+# set up colors
+git config color.ui
+
+
+
+#####################################################################################
+#####################################################################################
+#####################################################################################
+
+
+
+#######################
+### Tags & Releases ###
+#######################
+
+
+
+
 
